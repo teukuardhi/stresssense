@@ -11,10 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Salin semua file aplikasi ke dalam container
 COPY . .
 
-# Railway menggunakan PORT environment variable
-ENV PORT=5000
-
-# Expose port
+# Expose port yang akan digunakan (Railway akan override jika perlu)
 EXPOSE 5000
 
 # Jalankan aplikasi Flask
